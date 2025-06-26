@@ -4,6 +4,11 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const cors = require("cors");
 
 app.use(cors({
+    origin: "https://evelinarudin.github.io",  // din GitHub Pages-url
+    methods: ["GET", "POST"],
+    optionsSuccessStatus: 200
+}));
+
     origin: "https://evelinarudin.github.io",
     methods: ["GET", "POST"]
 }));
